@@ -1,0 +1,16 @@
+@import '../../rootStyle.module.scss';
+
+.footer{
+    text-align: center;
+    height: 390px;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    color: $color-white;
+    &__img{
+        height: 141px;
+    }
+}

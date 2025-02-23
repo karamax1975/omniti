@@ -1,14 +1,17 @@
-// import Image from "next/image";
 import styles from "./page.module.scss";
 import cn from "classnames";
 import Image from 'next/image';
 import hero_mark from './components/images/hero_mark.svg';
 import { Accordion } from "./components/Accordion/Accordion";
 import Career from "./components/Career/Career";
+import Feedback from './components/FeedBack/feedBack';
+import Footer from "./components/footer/Footer";
 
 export default function Home() {
+
   return (
     <div className={styles.root}>
+      {/* Hero ------------------------------------------------------------ */}
       <section id='hero' className={cn(styles.section, styles.hero)}>
         <div className={styles.container}>
           <h1>OMNITI</h1>
@@ -25,6 +28,7 @@ export default function Home() {
 
         </div>
       </section>
+      {/* About ------------------------------------------------------------ */}
       <section id="about" className={cn(styles.section, styles.about)}>
         <div className={styles.container}>
           <div className={styles.column}>
@@ -56,14 +60,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+      {/* Services ------------------------------------------------------------ */}
       <section id="services" className={cn(styles.section, styles.services)}>
       <div className={styles.container}>
         <h2 className={styles.section__title}>УСЛУГИ</h2>
       </div>
       <Accordion/>
       </section>
-
+      {/* Partners ------------------------------------------------------------ */}
       <section id="partners" className={cn(styles.section, styles.partners)}>
         <div className={styles.container}>
           <h4>СКАЖИ МНЕ КТО ТВОЙ ДРУГ — И Я СКАЖУ КТО ТЫ</h4>
@@ -77,13 +81,24 @@ export default function Home() {
           <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
         </div>
       </section>
+      {/* Career ------------------------------------------------------------ */}
       <section id="career" className={cn(styles.section, styles.career)}>
         <div className={styles.container}>
           <h2 className={styles.section__title}>КАРЬЕРА</h2>
           <Career/>
         </div>
       </section>
+      {/* Feedback ------------------------------------------------------------ */}
 
+      <section id="feedback" className={cn(styles.section, styles.feedback)}>
+        <div className={styles.container}>
+          <div className={styles.column}/>
+          <div className={styles.column}>
+            <Feedback/>
+          </div>
+        </div>
+      </section>
+      <Footer/>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { data } from './data.js';
 import { v4 as uId } from 'uuid';
 import styles from './styles.module.scss';
-import rootStyles from '../../rootStyle.module.scss';
 
 export default function Career() {
   return (
