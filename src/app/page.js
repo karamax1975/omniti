@@ -1,95 +1,89 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// import Image from "next/image";
+import styles from "./page.module.scss";
+import cn from "classnames";
+import Image from 'next/image';
+import hero_mark from './components/images/hero_mark.svg';
+import { Accordion } from "./components/Accordion/Accordion";
+import Career from "./components/Career/Career";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={styles.root}>
+      <section id='hero' className={cn(styles.section, styles.hero)}>
+        <div className={styles.container}>
+          <h1>OMNITI</h1>
+          <p>
+            Инновационный маркетинг, оптимизация бизнес процессов и собственные
+            разработки в сфере IT. Выводим ваш бизнес на новый уровень -
+            воплощаем ваши идеи в реальность!
+          </p>
+          <div className={styles.heroMark}>
+            <span>
+              <Image src={hero_mark} alt="mark" className={styles.heroMark__img}/>
+            </span>
+          </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      <section id="about" className={cn(styles.section, styles.about)}>
+        <div className={styles.container}>
+          <div className={styles.column}>
+            <div className={styles.about__numbersList}>
+              <div className={styles.about__numbersItem}>
+                <h3>300+</h3>
+                <p>проведенных рекламных кампаний</p>
+              </div>
+              <div className={styles.about__numbersItem}>
+                <h3>100+</h3>
+                <p>разработанных сайтов,<br/> систем и приложений</p>
+              </div>
+              <div className={styles.about__numbersItem}>
+                <h3>25+</h3>
+                <p>интеграций сервисов<br/> по управлению бизнесом</p>
+              </div>
+              <div className={styles.about__numbersItem}>
+                <h3>5+</h3>
+                <p>реализованных проектов бизнес-консалтинга</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.column}>
+            <div className={styles.about__promoText}>
+              <h2>О НАС</h2>
+              <p className={styles.first}>Наша команда — эксперты в своей области, которые не боятся выйти за рамки стандартного подхода. </p>
+              <p className={styles.second}>Мы предлагаем своим клиентам комплексный подход используя математические модели, инновационные инструменты и технологии,  которые обеспечивают максимальную эффективность и рост бизнес показателей</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="services" className={cn(styles.section, styles.services)}>
+      <div className={styles.container}>
+        <h2 className={styles.section__title}>УСЛУГИ</h2>
+      </div>
+      <Accordion/>
+      </section>
+
+      <section id="partners" className={cn(styles.section, styles.partners)}>
+        <div className={styles.container}>
+          <h4>СКАЖИ МНЕ КТО ТВОЙ ДРУГ — И Я СКАЖУ КТО ТЫ</h4>
+        </div>
+        <div className={styles.partners__logo}>
+          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
+          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
+          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
+          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
+          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
+          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
+        </div>
+      </section>
+      <section id="career" className={cn(styles.section, styles.career)}>
+        <div className={styles.container}>
+          <h2 className={styles.section__title}>КАРЬЕРА</h2>
+          <Career/>
+        </div>
+      </section>
+
     </div>
   );
 }
