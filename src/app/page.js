@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className={styles.root}>
       {/* Hero ------------------------------------------------------------ */}
-      <section id='hero' className={cn(styles.section, styles.hero)}>
+      <section id="hero" className={cn(styles.section, styles.hero)}>
         <div className={styles.container}>
           <h1>OMNITI</h1>
           <p>

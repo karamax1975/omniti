@@ -27,14 +27,13 @@ body{
     border-radius: 40px;
     background: $color-violet-normal;
     border: none;
-    font-variation-settings: "slnt" 0, "wdth" 135, "wght" 500,"GRAD" 122;
+    font-variation-settings: "wdth" 135, "wght" 500,"GRAD" 122;
     cursor: pointer;
     color: $color-white;
     transition: all .3s ease-in-out;
     &:hover{
         background: $color-violet-hover;
         font-variation-settings:
-        "slnt" 0,
         "wdth" 135,
         "wght" 718,
         "GRAD" 122;
