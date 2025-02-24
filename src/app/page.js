@@ -1,3 +1,6 @@
+"use client"
+
+import React from "react";
 import styles from "./page.module.scss";
 import cn from "classnames";
 import Image from 'next/image';
@@ -6,11 +9,14 @@ import { Accordion } from "./components/Accordion/Accordion";
 import Career from "./components/Career/Career";
 import Feedback from './components/FeedBack/feedBack';
 import Footer from "./components/footer/Footer";
+import {Header} from './components/header/header';
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <div className={styles.root}>
+    <div className={cn(styles.root, isMenuOpen && styles.root__menuIsOpen)}>
+      <Header action={setIsMenuOpen} trigger={isMenuOpen}/>
       {/* Hero ------------------------------------------------------------ */}
       <section id="hero" className={cn(styles.section, styles.hero)}>
         <div className={styles.container}>

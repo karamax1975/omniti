@@ -1,7 +1,4 @@
 import "./globals.css";
-import {Header} from './components/header/header';
-import Footer from './components/footer/Footer';
-
 
 export const metadata = {
   title: "Create Next App",
@@ -9,10 +6,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body>
-        <Header/>
         {children}
       </body>
     </html>

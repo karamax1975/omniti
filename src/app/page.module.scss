@@ -16,7 +16,6 @@
 .root {
   position: relative;
   z-index: 1;
-  margin-top: -150px;
   overflow: hidden;
   background: url('/background.jpg') no-repeat;
   background-size: cover;
@@ -28,6 +27,10 @@
     padding: 0 80px;
     height: 100%;
   }
+  &__menuIsOpen{
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 // Hero --------------------------------------------------------------------
 .hero {
@@ -36,6 +39,7 @@
   padding-top: 150px;
   height: 100%;
   position: relative;
+  top: -150px;
   &::after{
     content: '';
     position: absolute;
