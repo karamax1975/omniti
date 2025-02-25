@@ -20,6 +20,7 @@ export default function Home() {
       {/* Hero ------------------------------------------------------------ */}
       <section id="hero" className={cn(styles.section, styles.hero)}>
         <div className={styles.container}>
+        <Image src='/feedBack_bubble.png' alt="hero" className={styles.hero__img} width={1334} height={952}/>
           <h1>OMNITI</h1>
           <p>
             Инновационный маркетинг, оптимизация бизнес процессов и собственные
