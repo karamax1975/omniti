@@ -8,30 +8,57 @@
     @media screen and (max-width: 1280px) {
         gap: 26px;
     }
+    @media screen and (max-width: 768px) {
+        gap: 40px;
+    }
     .CareerItem{
         flex: 1;
         display: grid;
         grid-template-columns: 1.5fr 1fr 2.5fr 1fr;
         gap: 22px;
+        @media screen and (max-width: 1280px) {
+            gap: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            grid-template-rows: 1 fr;
+            grid-template-columns: none;
+            gap: 10px;
+        }
         &__profession{
             h3{
                 font-size: 48px;
                 font-variation-settings:
                 "wdth" 130,
                 "wght" 718,
-                "GRAD" 122,
+                "GRAD" 122;
+                @media screen and (max-width: 1280px) {
+                    font-size: 32px;
+                }
+                @media screen and (max-width: 768px) {
+                    font-size: 40px;
+                }
             }
         }
         &__complexity{
             display: flex;
             flex-direction: column;
             gap: 12px;
+            @media screen and (max-width: 1280px) {
+                gap: 13px;
+            }
+            @media screen and (max-width: 768px) {
+                gap: 8px;
+                margin-bottom: 20px;
+            }
             span{
                 color: rgba($color-white, .5);
                 font-size: 16px;
                 font-variation-settings:
                 "wdth" 120,
                 "wght" 700;
+                @media screen and (max-width: 1280px) {
+                    font-size: 12px;
+                }
             }
             h5{
                 font-size: 80px;
@@ -39,15 +66,30 @@
                 "wdth" 151,
                 "wght" 718,
                 "GRAD" 122;
+                @media screen and (max-width: 1280px) {
+                    font-size: 54px;
+                }
+                @media screen and (max-width: 768px) {
+                    font-size: 40px;
+                }
             }
         }
         &__description{
+            @media screen and (max-width: 1280px) {
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width: 768px) {
+                margin-bottom: 17px;
+            }
             p{
                 font-size: 24px;
                 font-variation-settings:
                 "wdth" 120,
                 "wght" 700;
                 line-height: 140%;
+                @media screen and (max-width: 1280px) {
+                    font-size: 16px;
+                }
             }
             span{
                 font-size: 18px;
@@ -55,6 +97,9 @@
                 "wdth" 120,
                 "wght" 300;
                 line-height: 160%;
+                @media screen and (max-width: 1280px) {
+                    font-size: 15px;
+                }
             }
         }
         &__action{
@@ -62,6 +107,13 @@
             align-items: center;
             .btn{
                 width: 100%;
+                @media screen and (max-width: 768px) {
+                    height: 40px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                width: 171px;
+                margin-bottom: 17px;
             }
         }
     }
