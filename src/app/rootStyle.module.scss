@@ -50,4 +50,10 @@ body{
     &:active{
         background: $color-violet-active;
     }
+    &:disabled{
+        background: rgba($color-white, .2);
+        color: rgba($color-white, .3);
+        cursor: not-allowed;
+        border: solid 2px rgba($color-white, .3);
+    }
 }

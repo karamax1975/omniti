@@ -31,6 +31,7 @@ const inputs = [
 
 export default function FeedBack() {
     const [dataForm, setDataForm] = React.useState(inputs);
+    const [checked, setChecked] = React.useState(false);
 
     
 const handleOnChange = (e, index) => {   
@@ -64,11 +65,11 @@ const handleOnChange = (e, index) => {
             
         )})}
         <div className={styles.formItemCheckbox}>
-            <input type="checkbox" name="checkbox" id="checkbox_id" value="value"/>
+            <input type="checkbox" name="checkbox" id="checkbox_id" value={checked} onChange={(e) => setChecked(e.target.checked)}/>
             <label htmlFor="checkbox_id">Согласие на обработку данных</label>
         </div>
         <div className={styles.formItem}>
-            <a className={styles.btn}>Написать</a>
+            <input className={styles.btn} type="submit" disabled={!checked} value={"Отправить"}/>
         </div>
     </form>;
 }
