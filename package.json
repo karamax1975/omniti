@@ -11,8 +11,10 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "next": "15.1.7",
+    "nuka-carousel": "^8.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-multi-carousel": "^2.8.6",
     "sass": "^1.85.0",
     "uuid": "^11.1.0"
   },

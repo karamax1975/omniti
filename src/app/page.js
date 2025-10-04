@@ -1,22 +1,26 @@
 "use client"
 
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./page.module.scss";
 import cn from "classnames";
 import Image from 'next/image';
-import hero_mark from './components/images/hero_mark.svg';
+import hero_mark from './components/images/hero_mark2.svg';
 import { Accordion } from "./components/Accordion/Accordion";
 import Career from "./components/Career/Career";
 import Feedback from './components/FeedBack/feedBack';
 import Footer from "./components/footer/Footer";
 import {Header} from './components/header/header';
+import {feedBackInputs, feedJobInputs} from './components/FeedBack/data';
+import {Logotypes} from './components/Logotypes/logotypes';
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [menuIsOpen, setIsMenuOpen] = React.useState(false);
+  const [usersJob, setUsersJob] = React.useState(null);
+  const careerSectionRef = useRef(null);
 
   return (
-    <div className={cn(styles.root, isMenuOpen && styles.root__menuIsOpen)}>
-      <Header action={setIsMenuOpen} trigger={isMenuOpen}/>
+    <div className={cn(styles.root, (usersJob || menuIsOpen) && styles.root__menuIsOpen)}>
+      <Header action={setIsMenuOpen} trigger={menuIsOpen}/>
       {/* Hero ------------------------------------------------------------ */}
       <section id="hero" className={cn(styles.section, styles.hero)}>
         <div className={styles.container}>
@@ -79,21 +83,31 @@ export default function Home() {
         <div className={styles.container}>
           <h4>СКАЖИ МНЕ КТО ТВОЙ ДРУГ — И Я СКАЖУ КТО ТЫ</h4>
         </div>
-        <div className={styles.partners__logo}>
-          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
-          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
-          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
-          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
-          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
-          <Image src="/Disney.svg" alt="logo" width={268} height={81.61}/>
-        </div>
+        <Logotypes/>
       </section>
       {/* Career ------------------------------------------------------------ */}
-      <section id="career" className={cn(styles.section, styles.career)}>
+      <section id="career" className={cn(styles.section, styles.career)} ref={careerSectionRef}>
         <div className={styles.container}>
           <h2 className={styles.section__title}>КАРЬЕРА</h2>
-          <Career/>
+          <Career action={setUsersJob}/>
         </div>
+        {usersJob&&
+          <div className={styles.modal}>
+            <div className={styles.modal__container}>
+              <button onClick={() => {
+                    setUsersJob(null);
+                    setTimeout(() => {
+                      careerSectionRef.current?.scrollIntoView({ 
+                          behavior: 'smooth',
+                          block: 'start'
+                      });
+                    }, 100);
+                  }
+                }/>
+              <Feedback inputs={feedJobInputs} handleClose={() => setUsersJob(null)} job={usersJob}/>
+            </div>
+          </div>
+        }
       </section>
       {/* Feedback ------------------------------------------------------------ */}
 
@@ -101,7 +115,7 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.column}/>
           <div className={styles.column}>
-            <Feedback/>
+            <Feedback inputs={feedBackInputs}/>
           </div>
         </div>
       </section>

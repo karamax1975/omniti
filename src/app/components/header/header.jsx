@@ -31,7 +31,7 @@ export const Header = ({trigger, action}) => {
             );
           })}
           <div className={styles.actionWrapper}>
-            <a href="#contact" className={styles.btn}>
+            <a href="#feedback" className={styles.btn}>
               Запустить проект
             </a>
           </div>

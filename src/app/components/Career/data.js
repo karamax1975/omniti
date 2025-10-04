@@ -1,20 +1,20 @@
 export const data = [
     {
         id:1,
-        profession: 'Аккаунт Групхед',
+        profession: 'Руководитель Группы',
         complexity:'4/5',
-        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description:'Опыт работы от 5 лет, умение стратегически мыслить и оценивать риски, опыт подготовки и защиты предложений, работа с командой от 5 человек'
     },
     {
         id:2,
         profession: 'Старший Таргетолог',
-        complexity:'1/5',
-        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        complexity:'3/5',
+        description:'Опыт работы от 3 лет, продвинутые знания веб-аналитики, глубокое понимание механизмов продвижения в каждой социальной сети'
     },
     {
         id:3,
-        profession: 'Мидл Аккаунт Менеджер',
-        complexity:'3/5',
-        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        profession: 'Аккаунт Менеджер',
+        complexity:'2/5',
+        description:'Опыт работы от 2 лет, знание веб-аналитики и диджитал инвентаря, опыт медиапланирования, понимание принципов веб-разработки'
     }
 ]

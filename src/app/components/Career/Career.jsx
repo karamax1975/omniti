@@ -3,7 +3,14 @@ import { data } from './data.js';
 import { v4 as uId } from 'uuid';
 import styles from './styles.module.scss';
 
-export default function Career() {
+export default function Career(props) {
+
+
+  const handleClick = (profession) => {
+    props.action(profession);
+    
+  };
+
   return (
     <div className={styles.Career}>
       {data.map((job) => {
@@ -17,11 +24,16 @@ export default function Career() {
               <h5>{job.complexity}</h5>
             </div>
             <div className={styles.CareerItem__description}>
-              <p>Описание требований к позиции</p>
+              <p>Требования:</p>
               <span>{job.description}</span>
             </div>
             <div className={styles.CareerItem__action}>
-              <a className={styles.btn}>Написать</a>
+              <a className={styles.btn} 
+                  onClick={(event)=>{
+                    event.preventDefault();
+                    handleClick(job.profession)
+                  }
+                }>Написать</a>
             </div>
           </div>
         );

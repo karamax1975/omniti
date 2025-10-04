@@ -1,14 +1,10 @@
-@import "./rootStyle.module.scss";
+@import './rootStyle.module.scss';
 
-.section__title{
+.section__title {
   color: $color-white;
   font-size: 8.75vw;
   white-space: nowrap;
-  font-variation-settings:
-  "slnt" 0,
-  "wdth" 151,
-  "wght" 760,
-  "GRAD" 122;
+  font-variation-settings: 'slnt' 0, 'wdth' 151, 'wght' 760, 'GRAD' 122;
   text-shadow: 0 0 3px $color-white, 0 0 3px $color-white;
   @media screen and (max-width: 1280px) {
     font-size: 8.65vw;
@@ -19,7 +15,6 @@
   }
 }
 
-
 .root {
   position: relative;
   z-index: 1;
@@ -29,7 +24,7 @@
   background-position: left top;
   @media screen and (max-width: 768px) {
     background: url('/background_768.jpg') no-repeat;
-    background-size:100% 100%;
+    background-size: 100% 100%;
   }
   section {
     height: 100vh;
@@ -41,7 +36,7 @@
       padding: 0 60px;
     }
   }
-  &__menuIsOpen{
+  &__menuIsOpen {
     overflow: hidden;
     height: 100vh;
     @media screen and (max-width: 768px) {
@@ -61,7 +56,6 @@
     top: -100px;
     margin-bottom: -100px;
     padding-top: 10vh;
-
   }
   @media screen and (max-width: 768px) {
     top: -100px;
@@ -69,26 +63,26 @@
     padding-bottom: 4vh;
     padding-top: 15vh;
   }
-  &::after{
+  &::after {
     content: '';
     position: absolute;
     width: 100vw;
     height: 89vh;
     bottom: 0;
-    right: -4%;
+    right: -12%;
     background: url('/hero_bubble.png') no-repeat;
     background-size: contain;
     background-position: right top;
     @media screen and (max-width: 1280px) {
       height: 84vh;
-      right: -13%;
+      right: -24%;
       bottom: 7vh;
     }
     @media screen and (max-width: 768px) {
       content: none;
+    }
   }
-  }
-  &__img{
+  &__img {
     display: none;
     @media screen and (max-width: 768px) {
       display: block;
@@ -98,11 +92,12 @@
       z-index: 1;
     }
   }
-  .container{
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
+
     z-index: 10;
     padding-bottom: 2vh;
     @media screen and (max-width: 1280px) {
@@ -120,39 +115,30 @@
     color: $color-white;
     font-size: 13vw;
     margin-bottom: -2vh;
-    font-variation-settings:
-      "slnt" 0,
-      "wdth" 147,
-      "wght" 720,
-      "GRAD" 122;
-      @media screen and (max-width: 1280px) {
-        font-size: 13.5vw;
-        margin-top: 20vh;
-        margin-bottom: 0;
-        @media screen and (max-width: 768px) {
-          width: 100%;
-          position: relative;
-          font-size: 21vw;
-          text-align: center;
-          z-index: 10;
-          margin-bottom: 2vh;
-          margin-top: 4vh;
-        }
+    font-variation-settings: 'slnt' 0, 'wdth' 147, 'wght' 720, 'GRAD' 122;
+    @media screen and (max-width: 1280px) {
+      font-size: 13.5vw;
+      margin-top: 20vh;
+      margin-bottom: 0;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        position: relative;
+        font-size: 21vw;
+        text-align: center;
+        z-index: 10;
+        margin-bottom: 2vh;
+        margin-top: 4vh;
       }
+    }
   }
-  p{
-    width: 42vw;
+  p {
+    width: 40vw;
     color: $color-white;
     font-size: 1.7vw;
     line-height: 125%;
-    font-variation-settings:
-    "slnt" 0,
-    "wdth" 120,
-    "wght" 300,
-    "GRAD" 0,
-    "XOPQ" 96;
+    font-variation-settings: 'slnt' 0, 'wdth' 120, 'wght' 300, 'GRAD' 0, 'XOPQ' 96;
     @media screen and (max-width: 1280px) {
-      width: 46vw;
+      width: 35vw;
       margin-bottom: 1vh;
       flex: 1;
     }
@@ -177,7 +163,7 @@
       }
     }
     span {
-      background: url("/hero_arrow.svg") no-repeat;
+      background: url('/hero_arrow.svg') no-repeat;
       background-size: 150px 150px;
       background-position: center center;
       @media screen and (max-width: 1280px) {
@@ -186,7 +172,7 @@
     }
     @keyframes rotate {
       from {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
       }
       to {
         transform: rotate(0deg);
@@ -197,34 +183,35 @@
 
 // About --------------------------------------------------------------------
 
-.about{
+.about {
   background-size: cover;
   background-position: left top;
   position: relative;
-  &::after{
+  &::after {
     content: '';
     position: absolute;
     width: 200vh;
     height: 90vh;
     top: 50%;
     transform: translateY(-50%);
-    left: -11%;
+    left: -25vw;
     background: url('/about_bubble.png') no-repeat;
     background-size: contain;
     background-position: left bottom;
     @media screen and (max-width: 1280px) {
       width: 100vw;
       height: 80vh;
+      left: -40vw;
     }
     @media screen and (max-width: 768px) {
       width: 120vw;
-      top:11%;
+      top: 11%;
       transform: rotate(-30deg) translateY(0);
       left: -60%;
     }
   }
   @media screen and (max-width: 768px) {
-    &::before{
+    &::before {
       content: '';
       position: absolute;
       width: 70vw;
@@ -239,8 +226,8 @@
       top: 10%;
     }
   }
-  
-  .container{
+
+  .container {
     display: flex;
     gap: 20px;
     position: relative;
@@ -255,7 +242,7 @@
       }
     }
   }
-  .column{
+  .column {
     flex: 1;
     display: flex;
     align-items: center;
@@ -264,11 +251,11 @@
       position: relative;
       flex: 0;
     }
-    &:nth-child(1){
+    &:nth-child(1) {
       @media screen and (max-width: 768px) {
         order: 2;
       }
-      &::after{
+      &::after {
         content: '';
         position: absolute;
         width: calc(50vw - 20px);
@@ -280,7 +267,7 @@
         backdrop-filter: blur(20px);
         background: rgba(73, 73, 73, 0.2);
         border-radius: 0 24px 24px 0;
-        border: solid 2px rgba($color-white, .2);
+        border: solid 2px rgba($color-white, 0.2);
         z-index: 1;
         @media screen and (max-width: 1280px) {
           width: 50%;
@@ -299,12 +286,12 @@
         }
       }
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       flex-direction: column;
       justify-content: center;
     }
   }
-  &__numbersList{
+  &__numbersList {
     position: relative;
     z-index: 2;
     display: grid;
@@ -317,27 +304,22 @@
       row-gap: 30px;
       padding: 0 4vh;
     }
-    h3{
+    h3 {
       font-size: 6.5vw;
-      font-variation-settings:
-      "wdth" 151,
-      "wght" 718,
-      "GRAD" 122;
+      font-variation-settings: 'wdth' 151, 'wght' 718, 'GRAD' 122;
       @media screen and (max-width: 768px) {
         font-size: 12vw;
       }
     }
-    p{
+    p {
       font-size: 1.25vw;
-      font-variation-settings:
-      "wdth" 120,
-      "wght" 718;
+      font-variation-settings: 'wdth' 120, 'wght' 718;
       @media screen and (max-width: 768px) {
         font-size: 2.3vw;
       }
     }
   }
-  &__promoText{
+  &__promoText {
     padding-left: 10vw;
     @media screen and (max-width: 1280px) {
       padding: 0;
@@ -351,59 +333,48 @@
         flex-direction: column;
       }
     }
-    h2{
+    h2 {
       font-size: 8.75vw;
       white-space: nowrap;
-      font-variation-settings:
-      "wdth" 151,
-      "wght" 760,
-      "GRAD" 122;
-      color: #10071B;
+      font-variation-settings: 'wdth' 151, 'wght' 760, 'GRAD' 122;
+      color: #10071b;
       text-shadow: 0 0 3px $color-white, 0 0 3px $color-white;
       @media screen and (max-width: 1280px) {
         margin-bottom: 14px;
         @media screen and (max-width: 768px) {
           margin-bottom: 0;
           font-size: 12.5vw;
-          font-variation-settings:
-          "wdth" 151,
-          "wght" 718,
-          "GRAD" 122;
+          font-variation-settings: 'wdth' 151, 'wght' 718, 'GRAD' 122;
         }
       }
     }
-    p{
+    p {
       font-size: 1.24vw;
       @media screen and (max-width: 768px) {
         font-size: 1vh;
       }
     }
-    .first{
+    .first {
       line-height: 140%;
       margin-bottom: 20px;
-      font-variation-settings:
-      "wdth" 120,
-      "wght" 700;
+      font-variation-settings: 'wdth' 120, 'wght' 700;
       @media screen and (max-width: 1280px) {
         margin-bottom: 14px;
         @media screen and (max-width: 768px) {
           margin-bottom: 0;
         }
       }
-      
     }
-    .second{
+    .second {
       line-height: 160%;
-      font-variation-settings:
-      "wdth" 120,
-      "wght" 300;
+      font-variation-settings: 'wdth' 120, 'wght' 300;
     }
   }
 }
 
 // Services --------------------------------------------------------------------
 
-.services{
+.services {
   position: relative;
   height: auto !important;
   margin: 120px 0;
@@ -414,13 +385,13 @@
   @media screen and (max-width: 768px) {
     margin: 0;
   }
-  .container{
+  .container {
     height: auto !important;
     @media screen and (max-width: 768px) {
       padding: 0 15px;
     }
   }
-  h2{
+  h2 {
     color: transparent;
     text-align: right;
     text-shadow: none;
@@ -435,7 +406,7 @@
 
 // Partners --------------------------------------------------------------------
 
-.partners{
+.partners {
   height: auto !important;
   color: $color-white;
   margin-bottom: 168px;
@@ -446,7 +417,7 @@
     margin-bottom: 0;
     height: 100vh !important;
   }
-  .container{
+  .container {
     display: flex;
     align-items: center;
     padding: 0 80px;
@@ -463,7 +434,7 @@
       height: 70%;
       padding: 0 15px;
     }
-    &::after{
+    &::after {
       content: '';
       position: absolute;
       width: 100vw;
@@ -484,56 +455,38 @@
         transform: translate(-50%, -50%);
       }
     }
-    h4{
+    h4 {
       flex: 1;
       text-align: center;
       font-size: 4.9vw;
       position: relative;
       z-index: 2;
-      font-variation-settings:
-      "wdth" 151,
-      "wght" 718,
-      "GRAD" 122;
+      font-variation-settings: 'wdth' 151, 'wght' 718, 'GRAD' 122;
       @media screen and (max-width: 768px) {
         font-size: 12vw;
       }
-    }
-  }
-  &__logo{
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    @media screen and (max-width: 1280px) {
-      gap: 66px;
-      height: 54px;
-      img{
-        height: 100%;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      height: 91px;
     }
   }
 }
 
 // Career --------------------------------------------------------------------
 
-.career{
+.career {
   height: auto !important;
   margin: 120px 0;
   @media screen and (max-width: 1280px) {
     margin: 80px 0;
   }
   @media screen and (max-width: 768px) {
-      margin: 0;
+    margin: 0;
   }
-  .container{
+  .container {
     @media screen and (max-width: 768px) {
       padding: 0 15px;
+    }
   }
-  }
-  h2{
-    color: #19062C;
+  h2 {
+    color: #19062c;
     text-align: right;
     margin-bottom: 40px;
     @media screen and (max-width: 1280px) {
@@ -543,10 +496,52 @@
       text-align: center;
     }
   }
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background: black;
+    &__container {
+      button {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: 26px;
+        right: 26px;
+        cursor: pointer;
+        border: none;
+        background: url('/burger_close.svg') no-repeat;
+        background-size: contain;
+        z-index: 1000;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 1280px) {
+        > form {
+          margin: 0 120px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        > form {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
 }
 
 // Feedback --------------------------------------------------------------------
-.feedback{
+.feedback {
   height: 1079px !important;
   position: relative;
   @media screen and (max-width: 1280px) {
@@ -555,7 +550,7 @@
   @media screen and (max-width: 768px) {
     height: 100vh !important;
   }
-  &::after{
+  &::after {
     content: '';
     position: absolute;
     width: 200vh;
@@ -582,7 +577,7 @@
     }
   }
   @media screen and (max-width: 768px) {
-    &::before{
+    &::before {
       content: '';
       position: absolute;
       height: 19%;
@@ -591,29 +586,27 @@
       left: -67%;
       background: url('/feedBack_bubble.png') no-repeat;
       background-size: contain;
-      transform: rotate(-130deg)
+      transform: rotate(-130deg);
     }
   }
-  .container{
+  .container {
     display: flex;
     position: relative;
     z-index: 2;
     @media screen and (max-width: 768px) {
       padding: 0 15px;
     }
-    .column{
+    .column {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       @media screen and (max-width: 768px) {
-        &:first-child{
+        &:first-child {
           display: none;
         }
       }
     }
-
   }
 }
-

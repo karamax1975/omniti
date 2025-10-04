@@ -1,35 +1,14 @@
 'use client'
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./feedBack.module.scss";
 import cn from "classnames";
 
-const inputs = [
-    {
-      type: 'text',
-      placeholder: 'Имя',
-      value: ''
-    },
-    {
-      type: 'email',
-      placeholder: 'E-mail',
-      value: ''
-    },
-    {
-      type: 'phone',
-      placeholder: 'Телефон',
-      value: ''
-    },
-    {
-      type: 'text',
-      placeholder: 'Компания',
-      value: ''
-    },
-
-  ]
 
 
-export default function FeedBack() {
+
+export default function FeedBack(props) {
+    const {inputs, handleClose, job} = props;
     const [dataForm, setDataForm] = React.useState(inputs);
     const [checked, setChecked] = React.useState(false);
 
@@ -42,11 +21,19 @@ const handleOnChange = (e, index) => {
     });
 };
 
+useEffect(() => {
+    job && setDataForm((prev) => {
+        const newDataForm = [...prev];
+        newDataForm[3].value = job;  
+      return newDataForm;
+    });  
+}, [job]);
 
 
-    
-
-    return <form className={styles.form}>
+    return <form className={styles.form} action={(data)=>{
+            console.log(data);
+            handleClose && handleClose(false);
+        }}>
         <h5>СВЯЖИТЕСЬ С НАМИ</h5>
         {dataForm.map((input, index) => {
             
@@ -56,6 +43,7 @@ const handleOnChange = (e, index) => {
                 type={input.type}
                 className={styles.formItem__input}
                 value={input.value}
+                required={input.required}
                 onChange={(e) => handleOnChange(e, index)}
                 />
                 <span className={cn(input.value && styles.formItem__placeholderActive, styles.formItem__placeholder)}>

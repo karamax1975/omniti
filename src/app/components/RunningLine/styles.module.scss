@@ -1,0 +1,29 @@
+.runningLine {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+}
+.text {
+  font-size: 150px;
+  animation: marquee 60s infinite linear;
+  white-space: nowrap;
+  font-variation-settings: 'wdth' 135, 'wght' 600, 'GRAD' 122;
+  &::after {
+    content: 'возможности не приходят сами вы создаете их';
+    position: relative;
+    left: 200px;
+  }
+  @media screen and (max-width: 1280px) {
+    font-size: 80px;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
