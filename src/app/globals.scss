@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -39,4 +41,17 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Roboto Flex", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    
 }
