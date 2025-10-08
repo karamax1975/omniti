@@ -3,7 +3,7 @@ name: omniti
 on:
   push:
     branches:
-      - pages-omniti
+      - pages_omniti
 
 jobs:
   build:
