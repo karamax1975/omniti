@@ -1,9 +1,9 @@
-name: Deploy Next.js to GitHub Pages
+name: omniti
 
 on:
   push:
     branches:
-      - pages-omniti
+      - pages_omniti
 
 jobs:
   build:
@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build project
-        run: npm run build
+      - name: Build and export static site
+        run: npm run build  # вызовет `next build && next export`
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -42,3 +42,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          publish_dir: ./out
