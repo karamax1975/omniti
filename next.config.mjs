@@ -12,6 +12,11 @@ const nextConfig = {
         includePaths: [path.join(__dirname, 'styles')],
     },
     output: 'export',
+      images: {
+        unoptimized: true,
+    },
+    basePath: '/omniti',
+    assetPrefix: '/omniti/',
 };
 
 export default nextConfig;
