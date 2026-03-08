@@ -10,7 +10,7 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <RunningLine />
-            <Image src={"/logo.svg"} width={100} height={100} alt='omniti' className={styles.footer__logo}/>
+            <Image src={"/omniti/logo.svg"} width={100} height={100} alt='omniti' className={styles.footer__logo}/>
             <p>OMNITI 2025 Все права защищены</p>
         </footer>
     )
