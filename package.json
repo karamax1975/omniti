@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next export",
-    "start": "next start",
+    "build": "next build",
+    "start": "serve out",
     "lint": "next lint",
-    "export": "next export",
-    "deploy": "npm run build && npm run export"
+    "deploy": "npm run build && npm run export",
+    "clean-build": "powershell -Command \"if (Test-Path out) { Remove-Item -Path 'out' -Recurse -Force }\" && npm run build"
   },
   "dependencies": {
     "classnames": "^2.5.1",
@@ -25,6 +25,7 @@
     "@types/node": "22.13.4",
     "@types/react": "19.0.10",
     "eslint": "^9",
-    "eslint-config-next": "15.1.7"
+    "eslint-config-next": "15.1.7",
+    "serve": "^14.2.6"
   }
 }
