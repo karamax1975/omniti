@@ -15,7 +15,7 @@ export const Header = ({trigger, action}) => {
 
   return <header className={cn(styles.header, trigger&&styles.header__active)}>
     <div className={styles.headerWrapper}>
-        <a href='/'><img src="/logo.svg" alt="logo" className={styles.logo}/></a>
+        <a href='/'><img src="/omniti/logo.svg" alt="logo" className={styles.logo}/></a>
         <button className={cn(styles.burger, trigger&&styles.burger__active)} onClick={() => action(prev=>!prev)} />    
         <nav className={cn(styles.headerNav, trigger&&styles.headerNav__active)}>
           {data.map((item) => {

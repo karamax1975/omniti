@@ -1,4 +1,4 @@
-const url = '/gallery/'
+const url = '/omniti/gallery/'
 
 export const logosData=[
     {
