@@ -15,8 +15,8 @@ const nextConfig = {
     images: {
     unoptimized: true,
     },
-    basePath: '/pages_omniti',
-    assetPrefix: '/pages_omniti/',
+    basePath: '/page_omniti',
+    assetPrefix: '/page_omniti/',
 };
 
 export default nextConfig;
