@@ -68,7 +68,7 @@
         border: none;
         cursor: pointer;
         display: none;
-        background: url('/burger.svg') no-repeat;
+        background: url('/omniti/burger.svg') no-repeat;
         background-size: contain;
         &:hover{
             opacity: .5;
@@ -80,7 +80,7 @@
             position: relative;
             z-index: 200;
             &__active{
-                background: url('/burger_close.svg') no-repeat;
+                background: url('/omniti/burger_close.svg') no-repeat;
             }
         }
         .logo{

@@ -144,10 +144,10 @@
         left: 15px;
         top: 15px;
         transform: translate(-50%, -50%);
-        background: url('/check.svg') no-repeat center;
+        background: url('/omniti/check.svg') no-repeat center;
         z-index: 2;
         @media screen and (max-width: 1280px) {
-          background: url('/check white.svg') no-repeat center;
+          background: url('/omniti/check white.svg') no-repeat center;
         }
         @media screen and (max-width: 768px) {
           left: 11px;
