@@ -33,7 +33,7 @@ export default function Career(props) {
                     event.preventDefault();
                     handleClick(job.profession)
                   }
-                }>Написать</a>
+                }>Откликнуться</a>
             </div>
           </div>
         );

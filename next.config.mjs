@@ -11,12 +11,12 @@ const nextConfig = {
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },
-    output: 'export',
+//     output: 'export',
     images: {
     unoptimized: true,
     },
-    basePath: '/omniti',
-    assetPrefix: '/omniti/',
+    basePath: '/page_omniti',
+    assetPrefix: '/page_omniti/',
 };
 
 export default nextConfig;

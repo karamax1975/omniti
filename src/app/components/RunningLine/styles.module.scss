@@ -6,7 +6,7 @@
 }
 .text {
   font-size: 150px;
-  animation: marquee 60s infinite linear;
+  animation: marquee 30s infinite linear;
   white-space: nowrap;
   font-variation-settings: 'wdth' 135, 'wght' 600, 'GRAD' 122;
   &::after {
