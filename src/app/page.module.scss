@@ -19,11 +19,11 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  background: url('/omniti/background.jpg') no-repeat;
+  background: url('/background.jpg') no-repeat;
   background-size: cover;
   background-position: left top;
   @media screen and (max-width: 768px) {
-    background: url('/omniti/background_768.jpg') no-repeat;
+    background: url('/background_768.jpg') no-repeat;
     background-size: 100% 100%;
   }
   section {
@@ -40,7 +40,7 @@
     overflow: hidden;
     height: 100vh;
     @media screen and (max-width: 768px) {
-      background: url('/omniti/background_768.jpg') no-repeat;
+      background: url('/background_768.jpg') no-repeat;
       background-size: cover;
     }
   }
@@ -70,7 +70,7 @@
     height: 89vh;
     bottom: 0;
     right: -12%;
-    background: url('/omniti/hero_bubble.png') no-repeat;
+    background: url('/hero_bubble.png') no-repeat;
     background-size: contain;
     background-position: right top;
     @media screen and (max-width: 1280px) {
@@ -163,7 +163,7 @@
       }
     }
     span {
-      background: url('/omniti/hero_arrow.svg') no-repeat;
+      background: url('/hero_arrow.svg') no-repeat;
       background-size: 150px 150px;
       background-position: center center;
       @media screen and (max-width: 1280px) {
@@ -195,7 +195,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: -25vw;
-    background: url('/omniti/about_bubble.png') no-repeat;
+    background: url('/about_bubble.png') no-repeat;
     background-size: contain;
     background-position: left bottom;
     @media screen and (max-width: 1280px) {
@@ -216,7 +216,7 @@
       position: absolute;
       width: 70vw;
       height: 70vh;
-      background: url('/omniti/about_bubble.png') no-repeat;
+      background: url('/about_bubble.png') no-repeat;
       background-size: contain;
       background-position: left bottom;
       height: 290px;
@@ -442,7 +442,7 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background: url('/omniti/partners_bubble.png') no-repeat;
+      background: url('/partners_bubble.png') no-repeat;
       background-size: contain;
       background-position: center;
       @media screen and (max-width: 1280px) {
@@ -513,7 +513,7 @@
         right: 26px;
         cursor: pointer;
         border: none;
-        background: url('/omniti/burger_close.svg') no-repeat;
+        background: url('/burger_close.svg') no-repeat;
         background-size: contain;
         z-index: 1000;
         &:hover {
@@ -558,7 +558,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: -15%;
-    background: url('/omniti/feedBack_bubble.png') no-repeat;
+    background: url('/feedBack_bubble.png') no-repeat;
     background-size: contain;
     background-position: left bottom;
     @media screen and (max-width: 1280px) {
@@ -584,7 +584,7 @@
       width: 100vw;
       top: 0;
       left: -67%;
-      background: url('/omniti/feedBack_bubble.png') no-repeat;
+      background: url('/feedBack_bubble.png') no-repeat;
       background-size: contain;
       transform: rotate(-130deg);
     }
